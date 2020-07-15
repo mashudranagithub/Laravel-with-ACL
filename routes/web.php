@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::group(['middleware' => ['auth']], function() {
 
@@ -29,5 +29,5 @@ Route::group(['middleware' => ['auth']], function() {
 	    Route::resource('posts','PostController');
 	});
 
-	Route::get('/dashboard', function () { return view('admin.index'); });
+	Route::get('/dashboard', function () { return view('admin.index'); })->middleware('verified');
 });
