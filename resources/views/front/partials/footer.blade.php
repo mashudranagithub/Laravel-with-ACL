@@ -68,41 +68,41 @@
 					<div class="footer-column">
 						<h3>Photo Gallery</h3>
 						<div class="footer-gallery gallery">
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="assets/images/banner/link-banner.jpg">
-								<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
+								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 							</a>
 						</div>
 					</div>

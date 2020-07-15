@@ -1,8 +1,9 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
+	@section('content')
 
 <section id="Page-banner">
-	<img src="assets/images/page-banners/Blog-banner.jpg" alt="Page Banner Image">
+	<img src="{{ url ('front/assets/images/page-banners/Blog-banner.jpg') }}" alt="Page Banner Image">
 </section>
 
 
@@ -21,7 +22,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-1.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
 								</a>
 								<span class="status">Upcoming</span>
 							</div>
@@ -42,7 +43,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-2.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-2.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -62,7 +63,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-1.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -82,7 +83,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-2.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-2.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -102,7 +103,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-1.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -122,7 +123,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-2.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-2.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -163,5 +164,4 @@
 		</section>
 		<!-- Events section end here -->
 
-
-<?php include('partials/footer.php'); ?>
+@endsection

@@ -1,9 +1,9 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
-
+	@section('content')
 
 <section id="Page-banner">
-	<img src="assets/images/page-banners/BHW-Bulletin.jpg" alt="Page Banner Image">
+	<img src="{{ url ('front/assets/images/page-banners/BHW-Bulletin.jpg') }}" alt="Page Banner Image">
 </section>
 
 
@@ -102,7 +102,7 @@
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="assets/images/bulletin/jan-2013.jpg" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/jan-2013.jpg') }}" alt="BHW Bulletin Image">
 						<div class="name-year">
 							<h4>BHW Bulletin</h4>
 							<p>Jan 2013</p>
@@ -114,7 +114,7 @@
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="assets/images/bulletin/jan-2014.jpg" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/jan-2014.jpg') }}" alt="BHW Bulletin Image">
 						<div class="name-year">
 							<h4>BHW Bulletin</h4>
 							<p>Jan 2014</p>
@@ -126,7 +126,7 @@
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="assets/images/bulletin/jan-2015.jpg" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/jan-2015.jpg') }}" alt="BHW Bulletin Image">
 						<div class="name-year">
 							<h4>BHW Bulletin</h4>
 							<p>Jan 2015</p>
@@ -138,7 +138,7 @@
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="assets/images/bulletin/jan-2016.jpg" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/jan-2016.jpg') }}" alt="BHW Bulletin Image">
 						<div class="name-year">
 							<h4>BHW Bulletin</h4>
 							<p>Jan 2016</p>
@@ -151,5 +151,4 @@
 	</div>
 </section>
 
-
-<?php include('partials/footer.php'); ?>
+@endsection

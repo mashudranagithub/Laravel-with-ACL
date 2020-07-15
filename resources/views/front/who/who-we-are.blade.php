@@ -1,9 +1,9 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
-
+	@section('content')
 
 <section id="Page-banner">
-	<img src="assets/images/page-banners/Who-we-are-banner.jpg" alt="Page Banner Image">
+	<img src="{{ url('front/assets/images/page-banners/Who-we-are-banner.jpg') }}" alt="Page Banner Image">
 </section>
 
 <section id="Who-we-are">
@@ -22,36 +22,7 @@
 </section>
 
 
-<section id="Page-links">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="single-page-link">
-					<a href="who-we-are.php">
-						<img src="assets/images/who-we-are/who-we-are-link.jpg" alt="Page Link Image">
-						<h3>Who We Are</h3>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="single-page-link">
-					<a href="what-we-do.php">
-						<img src="assets/images/who-we-are/who-we-are-link-2.jpg" alt="Page Link Image">
-						<h3>What We Do</h3>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="single-page-link">
-					<a href="bhw-report.php">
-						<img src="assets/images/who-we-are/who-we-are-link-report.jpg" alt="Page Link Image">
-						<h3>BHW Reports</h3>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+@include('front.partials.page-links')
 
 
 <section id="Promo-banner" class="d-flex align-items-center">
@@ -69,4 +40,4 @@
 
 
 
-<?php include('partials/footer.php'); ?>
+@endsection

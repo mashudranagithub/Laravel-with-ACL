@@ -11,35 +11,35 @@
 			    </ol> -->
 			    <div class="carousel-inner">
 			        <div class="carousel-item active">
-			            <img src="assets/images/slider/first-report.jpg" class="d-block w-100" alt="Slider Image">
+			            <img src="{{ url ('front/assets/images/slider/first-report.jpg') }}" class="d-block w-100" alt="Slider Image">
 			            <div class="carousel-caption d-none d-md-block">
 			                <h2>First report Launch</h2>
 			                <p>of BHW</p>
 			            </div>
 			        </div>
 			        <div class="carousel-item">
-			            <img src="assets/images/slider/hand-wash.jpg" class="d-block w-100" alt="Slider Image">
+			            <img src="{{ url ('front/assets/images/slider/hand-wash.jpg') }}" class="d-block w-100" alt="Slider Image">
 			            <div class="carousel-caption d-none d-md-block">
 			                <h2>WASH in Rohingya camp</h2>
 			                <p>Cox's Bazar</p>
 			            </div>
 			        </div>
 			        <div class="carousel-item">
-			            <img src="assets/images/slider/media-response.jpg" class="d-block w-100" alt="Slider Image">
+			            <img src="{{ url ('front/assets/images/slider/media-response.jpg') }}" class="d-block w-100" alt="Slider Image">
 			            <div class="carousel-caption d-none d-md-block">
 			                <h2>Media response on the</h2>
 			                <p>research of COVID-19</p>
 			            </div>
 			        </div>
 			        <div class="carousel-item">
-			            <img src="assets/images/slider/research-desceminition.jpg" class="d-block w-100" alt="Slider Image">
+			            <img src="{{ url ('front/assets/images/slider/research-desceminition.jpg') }}" class="d-block w-100" alt="Slider Image">
 			            <div class="carousel-caption d-none d-md-block">
 			                <h2>Research findings dissemination</h2>
 			                <p>at Pan Pascfic Sonargaon</p>
 			            </div>
 			        </div>
 			        <div class="carousel-item">
-			            <img src="assets/images/slider/group-discussion.jpg" class="d-block w-100" alt="Slider Image">
+			            <img src="{{ url ('front/assets/images/slider/group-discussion.jpg') }}" class="d-block w-100" alt="Slider Image">
 			            <div class="carousel-caption d-none d-md-block">
 			                <h2>Group discussion of</h2>
 			                <p>a research work</p>
@@ -98,7 +98,7 @@
 				<div class="single-work full-box">
 					<div class="single-work-image">
 						<a href="javascript:void(0);">
-							<img src="assets/images/work/1.jpg" alt="Work Image">
+							<img src="{{ url ('front/assets/images/work/1.jpg') }}" alt="Work Image">
 						</a>
 					</div>
 					<div class="single-work-info info-box">
@@ -110,7 +110,7 @@
 				<div class="single-work full-box">
 					<div class="single-work-image image-box">
 						<a href="javascript:void(0);">
-							<img src="assets/images/work/3.jpg" alt="Work Image">
+							<img src="{{ url ('front/assets/images/work/3.jpg') }}" alt="Work Image">
 						</a>
 					</div>
 					<div class="single-work-info info-box">
@@ -122,7 +122,7 @@
 				<div class="single-work full-box">
 					<div class="single-work-image image-box">
 						<a href="javascript:void(0);">
-							<img src="assets/images/work/2.jpg" alt="Work Image">
+							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
 						</a>
 					</div>
 					<div class="single-work-info info-box">
@@ -134,7 +134,7 @@
 				<div class="single-work full-box">
 					<div class="single-work-image image-box">
 						<a href="javascript:void(0);">
-							<img src="assets/images/work/2.jpg" alt="Work Image">
+							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
 						</a>
 					</div>
 					<div class="single-work-info info-box">
@@ -146,7 +146,7 @@
 				<div class="single-work full-box">
 					<div class="single-work-image image-box">
 						<a href="javascript:void(0);">
-							<img src="assets/images/work/2.jpg" alt="Work Image">
+							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
 						</a>
 					</div>
 					<div class="single-work-info info-box">
@@ -170,7 +170,7 @@
 		<!-- Link-banner start here -->
 		<section id="Link-banner">
 			<div class="link-banner-image">
-				<img src="assets/images/banner/link-banner.jpg" alt="Banner Image">
+				<img src="{{ url ('front/assets/images/banner/link-banner.jpg') }}" alt="Banner Image">
 			</div>
 			<div class="banner-links">
 				<div class="container">
@@ -204,7 +204,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-1.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
 								</a>
 								<span class="status">Upcoming</span>
 							</div>
@@ -225,7 +225,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-2.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-2.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -245,7 +245,7 @@
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
 								<a href="javascript:void(0);">
-									<img src="assets/images/events/event-1.jpg" alt="Event Image">
+									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
 								</a>
 							</div>
 							<div class="single-event-info info-box">
@@ -289,7 +289,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -312,7 +312,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -335,7 +335,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>

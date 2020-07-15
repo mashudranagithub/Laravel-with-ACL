@@ -1,8 +1,9 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
+	@section('content')
 
 <section id="Page-banner">
-	<img src="assets/images/page-banners/Blog-banner.jpg" alt="Page Banner Image">
+	<img src="{{ url ('front/assets/images/page-banners/Blog-banner.jpg') }}" alt="Page Banner Image">
 </section>
 
 
@@ -23,140 +24,140 @@
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/Photo-Gallery-2.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="javascript:void(0);">
-						<img src="assets/images/gallery/gallery-1.jpg" alt="Gallery Image">
+						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
@@ -186,5 +187,4 @@
 
 
 
-
-<?php include('partials/footer.php'); ?>
+@endsection

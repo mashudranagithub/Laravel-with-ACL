@@ -1,8 +1,9 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
+	@section('content')
 
 <section id="Page-banner">
-	<img src="assets/images/page-banners/Blog-banner.jpg" alt="Page Banner Image">
+	<img src="{{ url ('front/assets/images/page-banners/Blog-banner.jpg') }}" alt="Page Banner Image">
 </section>
 
 		<!-- Blogs section start here -->
@@ -20,7 +21,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -43,7 +44,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -66,7 +67,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -89,7 +90,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -112,7 +113,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -135,7 +136,7 @@
 						<div class="single-blog">
 							<div class="single-blog-image">
 								<a href="javascript:void(0);">
-									<img src="assets/images/blog/blog-1.jpg" alt="Blog Image">
+									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
 								</a>
 								<div class="date">
 									<span class="publish-date">15</span>
@@ -180,6 +181,4 @@
 		<!-- Blogs section end here -->
 
 
-
-
-<?php include('partials/footer.php'); ?>
+@endsection

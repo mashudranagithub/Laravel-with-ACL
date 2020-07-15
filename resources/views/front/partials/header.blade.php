@@ -44,7 +44,7 @@
 					<div class="row d-flex align-items-center">
 						<div class="col-md-3">
 							<div class="logo">
-								<a href="index.php"><img src="assets/images/logo/logo.png" alt="BHW Logo Image"></a>
+								<a href="{{ route('homepage') }}"><img src="{{ url('front/assets/images/logo/logo.png') }}" alt="BHW Logo Image"></a>
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -56,17 +56,17 @@
 		                            <div class="collapse navbar-collapse" id="navbarResponsive">
 		                                <ul class="navbar-nav ml-auto">
 		                                    <li class="first-drop-menu">
-		                                        <a href="who-we-are.php">Who we are</a>
+		                                        <a href="{{ route('who-we-are') }}">Who we are</a>
 		                                        <ul class="first-dropped-menu">
-		                                            <li><a href="background.php">Background</a></li>
-		                                            <li><a href="working-group.php">Working Group</a></li>
-		                                            <li><a href="advisory-comittee.php">Advisory Group</a></li>
-		                                            <li><a href="advisory-comittee.php">Themetic Group</a></li>
-		                                            <li><a href="secretariat.php">Secretariat</a></li>
+		                                            <li><a href="{{ route('background') }}">Background</a></li>
+		                                            <li><a href="{{ route('working-group') }}">Working Group</a></li>
+		                                            <li><a href="{{ route('advisory-group') }}">Advisory Group</a></li>
+		                                            <li><a href="{{ route('thematic-group') }}">Themetic Group</a></li>
+		                                            <li><a href="{{ route('secretariat-group') }}">Secretariat</a></li>
 		                                        </ul>
 		                                    </li>
 		                                    <li class="first-drop-menu">
-		                                        <a href="what-we-do.php">What we do</a>
+		                                        <a href="{{ route('what-we-do') }}">What we do</a>
 		                                        <ul class="first-dropped-menu">
 		                                            <li><a href="research.php">Research</a></li>
 		                                            <li><a href="blank-page.php">Publications</a></li>
@@ -79,23 +79,23 @@
 		                                        </ul>
 		                                    </li>
 		                                    <li class="first-drop-menu">
-		                                        <a href="#">Reports</a>
+		                                        <a href="{{ route('bhw-reports') }}">Reports</a>
 		                                        <ul class="first-dropped-menu">
-		                                            <li><a href="bhw-bulletin.php">BHW Bulletin</a></li>
-		                                            <li><a href="bhw-report.php">BHW Reports</a></li>
+		                                            <li><a href="{{ route('bhw-reports') }}">BHW Reports</a></li>
+		                                            <li><a href="{{ route('bhw-bulletin') }}">BHW Bulletin</a></li>
 		                                        </ul>
 		                                    </li>
 		                                    <li>
-		                                        <a href="photo-gallery.php">Photo gallery</a>
+		                                        <a href="{{ route('photo-gallery') }}">Photo gallery</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="blog.php">Blogs</a>
+		                                        <a href="{{ route('blogs') }}">Blogs</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="events.php">Events</a>
+		                                        <a href="{{ route('events') }}">Events</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="contact.php">Contact</a>
+		                                        <a href="{{ route('contact') }}">Contact</a>
 		                                    </li>
 		                                </ul>
 		                            </div>
