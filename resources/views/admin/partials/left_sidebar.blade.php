@@ -12,16 +12,9 @@
         </div>
       </div>
 
-
-
-
-
-
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-      
-
 
         <li class="active">
           <a href="{{ url('/dashboard') }}">
@@ -41,6 +34,20 @@
               <li><a class="nav-link" href="{{ route('users.index') }}"><i class="fa fa-circle-o text-aqua"></i> Manage Users</a></li>
               <li><a class="nav-link" href="{{ route('roles.index') }}"><i class="fa fa-circle-o text-red"></i> Manage Role</a></li>
               <!-- <li><a class="nav-link" href="{{ route('posts.index') }}"><i class="fa fa-circle-o text-yellow"></i> Manage Post</a></li> -->
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-users text-aqua"></i>
+            <span>Group Members</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('group-members') }}"><i class="fa fa-circle-o text-aqua"></i>All Group Members </a></li>
+              <li><a class="nav-link" href="{{ route('createGroup-member') }}"><i class="fa fa-circle-o text-aqua"></i>Create Group Member </a></li>
           </ul>
         </li>
 

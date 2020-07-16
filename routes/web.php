@@ -58,4 +58,18 @@ Route::group(['middleware' => ['auth']], function() {
 	    Route::resource('posts','PostController');
 	});
 
+	// Group Member Routes Start
+	Route::get('group-members', 'Group_memberController@index')->name('group-members');
+	Route::get('group-member/create', 'Group_memberController@create')->name('createGroup-member');
+	Route::post('group-member/create', 'Group_memberController@store')->name('storeGroup-member');
+	Route::get('group-member/edit/{id}', 'Group_memberController@edit')->name('editGroup-member');
+	Route::put('group-member/update/{id}', 'Group_memberController@update')->name('updateGroup-member');
+	Route::delete('group-member/delete/{id}', 'Group_memberController@destroy')->name('deleteGroup-member');
+
+
+
+
+
+	
+
 });
