@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                   <label for="member-position">Member Position</label>
-                  <input name="member_position" type="number" class="form-control" id="member-position" placeholder="1" value="2" required>
+                  <input name="member_position" type="number" class="form-control" id="member-position" placeholder="1" value="1" required>
                 </div>
                 <div class="form-group">
                   <label for="group-name">Group Name</label>

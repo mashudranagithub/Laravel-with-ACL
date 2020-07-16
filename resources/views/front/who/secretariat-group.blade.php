@@ -21,50 +21,23 @@
 <section id="Group">
 	<div class="container">
 		<div class="row">
+
+
+		@foreach($members as $member)
 			<div class="col-md-3">
 				<div class="group-member">
 					<div class="group-member-image">
-						<img src="{{ url('front/assets/images/who-we-are/secretariat/yasmint.jpg') }}" alt="Group Member Image">
-						<p class="name">Yasmin H Ahmed</p>
+						<img src="{{ url ('front/assets/images/who-we-are/'.$member->member_group.'/'.$member->member_image)}}" alt="Group Member Image">
+						<p class="name">{{ $member->member_name }}</p>
 					</div>
-					<a href="single-secretariat-member.php" class="group-member-details-link">
-						<img src="{{ url('front/assets/images/who-we-are/link-icon.png') }}" alt="Single member link icon">
+					<a href="{{ route('single-member', $member->id) }}" class="group-member-details-link">
+						<img src="{{ url ('front/assets/images/who-we-are/link-icon.png') }}" alt="Single member link icon">
 					</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="group-member">
-					<div class="group-member-image">
-						<img src="{{ url('front/assets/images/who-we-are/secretariat/masudul.jpg') }}" alt="Group Member Image">
-						<p class="name">Shaikh Masudul Alam</p>
-					</div>
-					<a href="single-secretariat-member.php" class="group-member-details-link">
-						<img src="{{ url('front/assets/images/who-we-are/link-icon.png') }}" alt="Single member link icon">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="group-member">
-					<div class="group-member-image">
-						<img src="{{ url('front/assets/images/who-we-are/secretariat/mufaqqarul.jpg') }}" alt="Group Member Image">
-						<p class="name">Md. Mofakker Morshed Khan Chowdhury</p>
-					</div>
-					<a href="single-secretariat-member.php" class="group-member-details-link">
-						<img src="{{ url('front/assets/images/who-we-are/link-icon.png') }}" alt="Single member link icon">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="group-member">
-					<div class="group-member-image">
-						<img src="{{ url('front/assets/images/who-we-are/secretariat/mahruba.jpg') }}" alt="Group Member Image">
-						<p class="name">Mahruba Khanam</p>
-					</div>
-					<a href="single-secretariat-member.php" class="group-member-details-link">
-						<img src="{{ url('front/assets/images/who-we-are/link-icon.png') }}" alt="Single member link icon">
-					</a>
-				</div>
-			</div>
+		@endforeach
+
+
 		</div>
 	</div>
 </section>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Group_member;
 use DB;
 use Session;
 
@@ -28,25 +29,49 @@ class BhwController extends Controller
 
     // Who We Are - Working Group
     public function working_group() {
-        return view('front.who.working-group');
+        $members = DB::table('group_members')->where('member_group', '=', 'working-group')->orderBy('member_position')->get();
+        return view('front.who.working-group', compact(
+            'members',
+        ));
     }
 
 
     // Who We Are - Advisory Group
     public function advisory_group() {
-        return view('front.who.advisory-group');
+        $members = DB::table('group_members')->where('member_group', '=', 'advisory-group')->orderBy('member_position')->get();
+        return view('front.who.advisory-group', compact(
+            'members',
+        ));
     }
 
 
     // Who We Are - Thematic Group
     public function thematic_group() {
-        return view('front.who.thematic-group');
+        $members = DB::table('group_members')->where('member_group', '=', 'thematic-group')->orderBy('member_position')->get();
+        return view('front.who.thematic-group', compact(
+            'members',
+        ));
     }
 
 
     // Who We Are - Secretariat Group
     public function secretariat_group() {
-        return view('front.who.secretariat-group');
+        $members = DB::table('group_members')->where('member_group', '=', 'secretariat-group')->orderBy('member_position')->get();
+        return view('front.who.secretariat-group', compact(
+            'members',
+        ));
+    }
+
+
+    public function single_member($id) {
+        $single_member = Group_member::find($id);
+
+        $other_members = DB::table('group_members')->where('member_group', '=', $single_member->member_group)->orderBy('member_position')->get();
+
+        return view('front.who.single-member', compact(
+            'single_member',
+            'other_members',
+        ));
     }
 
 

@@ -23,6 +23,9 @@ Route::get('thematic-group', 'BhwController@thematic_group')->name('thematic-gro
 Route::get('secretariat-group', 'BhwController@secretariat_group')->name('secretariat-group');
 
 
+Route::get('single-member/{id}', 'BhwController@single_member')->name('single-member');
+
+
 
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
 
@@ -70,6 +73,6 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
-	
+
 
 });
