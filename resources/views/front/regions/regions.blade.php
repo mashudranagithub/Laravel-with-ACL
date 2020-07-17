@@ -1,8 +1,8 @@
-<?php include('partials/header.php'); ?>
+@extends('front.layouts.master')
 
-
+@section('content')
 <section id="Page-banner">
-	<img src="assets/images/page-banners/Policy-Advocacy.jpg" alt="Page Banner Image">
+	<img src="{{ url('front/assets/images/page-banners/Policy-Advocacy.jpg') }}" alt="Page Banner Image">
 </section>
 
 
@@ -27,7 +27,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">rajshahi</h4>
 					</a>
 				</div>
@@ -35,7 +35,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Rangpur</h4>
 					</a>
 				</div>
@@ -43,7 +43,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Mymensingh</h4>
 					</a>
 				</div>
@@ -51,7 +51,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Sylhet</h4>
 					</a>
 				</div>
@@ -59,7 +59,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Barishal</h4>
 					</a>
 				</div>
@@ -67,7 +67,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Chattogram</h4>
 					</a>
 				</div>
@@ -75,7 +75,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Dhaka</h4>
 					</a>
 				</div>
@@ -83,7 +83,7 @@
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="assets/images/what-we-do/regions/Regional-Chapter.jpg" alt="Region Image">
+						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
 						<h4 class="region-name">Khulna</h4>
 					</a>
 				</div>
@@ -93,6 +93,4 @@
 </section>
 
 
-
-
-<?php include('partials/footer.php'); ?>
+@endsection

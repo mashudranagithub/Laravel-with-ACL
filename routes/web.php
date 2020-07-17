@@ -25,6 +25,10 @@ Route::get('secretariat-group', 'BhwController@secretariat_group')->name('secret
 Route::get('single-member/{id}', 'BhwController@single_member')->name('single-member');
 
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
+
+Route::get('/regions', 'BhwController@regions')->name('regions');
+Route::get('/single-region', 'BhwController@single_region')->name('single-region');
+
 Route::get('/bhw-reports', 'BhwController@bhw_reports')->name('bhw-reports');
 Route::get('/bhw-bulletin', 'BhwController@bhw_bulletin')->name('bhw-bulletin');
 Route::get('/photo-gallery', 'BhwController@photo_gallery')->name('photo-gallery');

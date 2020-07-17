@@ -80,6 +80,18 @@ class BhwController extends Controller
         return view('front.what-we-do');
     }
 
+    // What We Do - Regions
+    public function regions() {
+        return view('front.regions.regions');
+    }
+
+    // What We Do - Single Regions
+    public function single_region() {
+        return view('front.regions.single-region');
+    }
+
+
+
 
     // BHW Reports
     public function bhw_reports() {

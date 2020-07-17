@@ -70,7 +70,7 @@
 		                                        <ul class="first-dropped-menu">
 		                                            <li><a href="research.php">Research</a></li>
 		                                            <li><a href="blank-page.php">Publications</a></li>
-		                                            <li><a href="regional-chapter.php">Regional Chapter</a></li>
+		                                            <li><a href="{{ route('regions') }}">Regional Chapter</a></li>
 		                                            <li><a href="short-courses.php">Short Course</a></li>
 		                                            <li><a href="policy-advocacy.php">Policy Advocacy</a></li>
 		                                            <li><a href="networking.php">Networking</a></li>
