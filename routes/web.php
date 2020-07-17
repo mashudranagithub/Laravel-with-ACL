@@ -63,6 +63,16 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
+	// Region Routes Start Here
+	Route::get('all-regions', 'RegionController@index')->name('all-regions');
+	Route::get('region/create', 'RegionController@create')->name('createRegion');
+	Route::post('region/create', 'RegionController@store')->name('storeRegion');
+	Route::get('region/edit/{id}', 'RegionController@edit')->name('editRegion');
+	Route::put('region/update/{id}', 'RegionController@update')->name('updateRegion');
+	Route::delete('region/delete/{id}', 'RegionController@destroy')->name('deleteRegion');
+
+
+
 
 
 

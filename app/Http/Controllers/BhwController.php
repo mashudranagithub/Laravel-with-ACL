@@ -82,7 +82,10 @@ class BhwController extends Controller
 
     // What We Do - Regions
     public function regions() {
-        return view('front.regions.regions');
+        $regions = DB::table('regions')->get();
+        return view('front.regions.regions', compact(
+            'regions',
+        ));
     }
 
     // What We Do - Single Regions

@@ -51,6 +51,26 @@
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-map text-aqua"></i>
+            <span>Regions</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-regions') }}"><i class="fa fa-circle-o text-aqua"></i>All Regions </a></li>
+              <li><a class="nav-link" href="{{ route('createRegion') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Region </a></li>
+          </ul>
+        </li>
+
+
+
+
+
+
+
         <li>
           <a href="pages/widgets.html">
             <i class="fa fa-th"></i> <span>Widgets</span>

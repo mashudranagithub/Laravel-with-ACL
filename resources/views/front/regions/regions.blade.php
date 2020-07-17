@@ -24,15 +24,17 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach($regions as $region)
 			<div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
-						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-						<h4 class="region-name">rajshahi</h4>
+						<img src="{{ url('front/assets/images/region/'.$region->region_image) }}" alt="Region Image">
+						<h4 class="region-name">{{ $region->region_name }}</h4>
 					</a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			@endforeach
+			<!-- <div class="col-md-3">
 				<div class="single-region">
 					<a href="single-region.php">
 						<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
@@ -87,7 +89,7 @@
 						<h4 class="region-name">Khulna</h4>
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
