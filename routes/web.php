@@ -22,29 +22,16 @@ Route::get('advisory-group', 'BhwController@advisory_group')->name('advisory-gro
 Route::get('thematic-group', 'BhwController@thematic_group')->name('thematic-group');
 Route::get('secretariat-group', 'BhwController@secretariat_group')->name('secretariat-group');
 
-
 Route::get('single-member/{id}', 'BhwController@single_member')->name('single-member');
 
-
-
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
-
 Route::get('/bhw-reports', 'BhwController@bhw_reports')->name('bhw-reports');
-
 Route::get('/bhw-bulletin', 'BhwController@bhw_bulletin')->name('bhw-bulletin');
-
 Route::get('/photo-gallery', 'BhwController@photo_gallery')->name('photo-gallery');
-
 Route::get('/blogs', 'BhwController@blogs')->name('blogs');
-
 Route::get('/events', 'BhwController@events')->name('events');
-
 Route::get('/contact', 'BhwController@contact')->name('contact');
 
-
-
-// Route::get('/', 'RtbdController@index')->name('homepage');
-// Route::get('/about', 'RtbdController@aboutPage')->name('aboutpage');
 
 
 
@@ -65,6 +52,7 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('group-members', 'Group_memberController@index')->name('group-members');
 	Route::get('group-member/create', 'Group_memberController@create')->name('createGroup-member');
 	Route::post('group-member/create', 'Group_memberController@store')->name('storeGroup-member');
+	Route::get('group-member/show/{id}', 'Group_memberController@show')->name('showGroup-member');
 	Route::get('group-member/edit/{id}', 'Group_memberController@edit')->name('editGroup-member');
 	Route::put('group-member/update/{id}', 'Group_memberController@update')->name('updateGroup-member');
 	Route::delete('group-member/delete/{id}', 'Group_memberController@destroy')->name('deleteGroup-member');

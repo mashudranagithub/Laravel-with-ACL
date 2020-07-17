@@ -80,7 +80,7 @@ body {
 }
 .content-wrapper {
     min-height: calc(100vh - 101px);
-    background-color: #fff;
+    background-color: #f1f1f1;
     z-index: 800;
     padding: 50px;
 }
@@ -2609,6 +2609,7 @@ a:focus {
 }
 .table-bordered {
     border: 1px solid #f4f4f4;
+    width: 100%;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -5381,4 +5382,22 @@ hr {
     .table-responsive > .table tr td {
         white-space: normal !important;
     }
+}
+
+
+
+
+
+/*My CSS*/
+
+section.content.group-members table tbody tr td:first-child {
+    width:100px !important;
+}
+
+section.content.group-members table tbody tr td:nth-child(2) {
+    width:35% !important;
+}
+
+section.content.group-members table tbody tr td:last-child {
+    width:30% !important;
 }

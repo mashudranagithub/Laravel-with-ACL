@@ -16,7 +16,11 @@ class Group_memberController extends Controller
      */
     public function index()
     {
-        return view('admin.group-members.index');
+
+        $members = DB::table('group_members')->orderBy('id')->get();
+        return view('admin.group-members.index', compact(
+            'members',
+        ));
     }
 
     /**
@@ -78,7 +82,11 @@ class Group_memberController extends Controller
      */
     public function show($id)
     {
-        //
+        $single_member = Group_member::find($id);
+
+        return view('admin.group-members.show', compact(
+            'single_member',
+        ));
     }
 
     /**
