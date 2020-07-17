@@ -15,14 +15,19 @@
   </ol>
 </section>
 
-@if ($msg = Session::get('msg'))
-    <div class="alert alert-success">
-        <p>{{ $msg }}</p>
-    </div>
-@endif
-
 <!-- Main content -->
 <section class="content group-members">
+	<div class="row" style="margin-bottom:30px;">
+		<div class="col-md-12 text-right">
+			<button type="button" class="btn btn-success btn-lg"><a style="color: #fff;" href="{{ route('createGroup-member') }}">Create A New Meber</a></button>
+		</div>
+	</div>
+
+	@if ($msg = Session::get('msg'))
+	    <div class="alert alert-success">
+	        <p>{{ $msg }}</p>
+	    </div>
+	@endif
 	<div class="row">
 		<div class="col-md-12 col-lg-12 col-xs-12">
           <div class="box">

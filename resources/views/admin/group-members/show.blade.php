@@ -26,6 +26,7 @@
 	<div class="row" style="margin-bottom:30px;">
 		<div class="col-md-12 text-right">
 			<button type="button" class="btn btn-success btn-lg"><a style="color: #fff;" href="{{ route('group-members') }}">Back to see all members</a></button>
+			<button type="button" class="btn btn-warning btn-lg"><a style="color: #fff;" href="{{ route('editGroup-member', $single_member->id) }}">Edit</a></button>
 		</div>
 	</div>
 	<div class="row mt-4">

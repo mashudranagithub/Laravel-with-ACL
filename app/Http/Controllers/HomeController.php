@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Group_member;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $group_members_quantity = DB::table('group_members')->count();
+        return view('admin.index', compact(
+            'group_members_quantity',
+        ));
     }
 }

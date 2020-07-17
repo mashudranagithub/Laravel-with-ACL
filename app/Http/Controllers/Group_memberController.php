@@ -97,7 +97,11 @@ class Group_memberController extends Controller
      */
     public function edit($id)
     {
-        //
+        $single_member = Group_member::find($id);
+        
+        return view('admin.group-members.edit', compact(
+            'single_member',
+        ));
     }
 
     /**
@@ -108,8 +112,39 @@ class Group_memberController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {        
+        $this->validate($request,[
+            'member_name'=>'required',
+            'member_designation'=>'required',
+            'member_email'=>'required',
+            'member_group'=>'required',
+            'member_detail'=>'required',
+            'member_position'=>'required'
+        ]);
+
+        $member = Group_member::find($id);
+
+        // dd($member);
+
+        $img = $request->file('member_image');
+
+        if($img){
+            $name = $img->getClientOriginalName();
+            $path = public_path("front/assets/images/who-we-are/".$request->input('member_group'));
+            $img->move($path, $name);
+            $member->member_image = $name;
+        }
+
+        $member->member_name = $request->input('member_name');
+        $member->member_designation = $request->input('member_designation');
+        $member->member_email = $request->input('member_email');
+        $member->member_group = $request->input('member_group');
+        $member->member_detail = $request->input('member_detail');
+        $member->member_position = $request->input('member_position');
+
+        $member->save();
+
+        return redirect()->route('group-members')->with('msg','Group Member Updated Successfully');
     }
 
     /**
@@ -120,6 +155,8 @@ class Group_memberController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table("group_members")->where('id',$id)->delete();
+        return redirect()->route('group-members')
+            ->with('msg','Member deleted successfully');
     }
 }
