@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-heading">
-					<h2>Regional Chapter - <span>Rajshahi</span></h2>
+					<h2>Regional Chapter - <span>{{ $region->region_name }}</span></h2>
 				</div>
 			</div>
 		</div>
@@ -114,54 +114,14 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="owl-carousel region-slider">
+					@foreach($regions as $single_region)
 					<div class="single-region">
 						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">rajshahi</h4>
+							<img src="{{ url('front/assets/images/region/'.$single_region->region_image) }}" alt="Region Image">
+							<h4 class="region-name">{{ $single_region->region_name }}</h4>
 						</a>
 					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Rangpur</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Mymensingh</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Sylhet</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Barishal</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Chattogram</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Dhaka</h4>
-						</a>
-					</div>
-					<div class="single-region">
-						<a href="single-region.php">
-							<img src="{{ url('front/assets/images/what-we-do/regions/Regional-Chapter.jpg') }}" alt="Region Image">
-							<h4 class="region-name">Khulna</h4>
-						</a>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>

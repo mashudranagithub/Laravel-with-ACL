@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Group_member;
+use App\Region;
 use DB;
 use Session;
 
@@ -89,8 +90,13 @@ class BhwController extends Controller
     }
 
     // What We Do - Single Regions
-    public function single_region() {
-        return view('front.regions.single-region');
+    public function single_region($id) {
+        $region = Region::find($id);
+        $regions = DB::table('regions')->get();
+        return view('front.regions.single-region', compact(
+            'region',
+            'regions',
+        ));
     }
 
 

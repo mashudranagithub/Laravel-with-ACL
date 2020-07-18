@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'BhwController@index')->name('homepage');
 
+// Who we are view routes
 Route::get('/who-we-are', 'BhwController@who_we_are')->name('who-we-are');
 Route::get('background', 'BhwController@background')->name('background');
 Route::get('working-group', 'BhwController@working_group')->name('working-group');
@@ -26,8 +27,9 @@ Route::get('single-member/{id}', 'BhwController@single_member')->name('single-me
 
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
 
+// Region View Routes
 Route::get('/regions', 'BhwController@regions')->name('regions');
-Route::get('/single-region', 'BhwController@single_region')->name('single-region');
+Route::get('/single-region/{id}', 'BhwController@single_region')->name('single-region');
 
 Route::get('/bhw-reports', 'BhwController@bhw_reports')->name('bhw-reports');
 Route::get('/bhw-bulletin', 'BhwController@bhw_bulletin')->name('bhw-bulletin');
