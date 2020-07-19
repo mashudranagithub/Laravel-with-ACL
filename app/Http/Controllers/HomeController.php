@@ -28,9 +28,11 @@ class HomeController extends Controller
     {
         $group_members_quantity = DB::table('group_members')->count();
         $regions = DB::table('regions')->count();
+        $c_members = DB::table('committee_members')->count();
         return view('admin.index', compact(
             'group_members_quantity',
             'regions',
+            'c_members',
         ));
     }
 }

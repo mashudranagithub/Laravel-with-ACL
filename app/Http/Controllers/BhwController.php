@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Group_member;
+use App\Committee_member;
 use App\Region;
+use App\Selected_institution;
 use DB;
 use Session;
 
@@ -78,7 +80,7 @@ class BhwController extends Controller
 
     // What We Do
     public function what_we_do() {
-        return view('front.what-we-do');
+        return view('front.what.what-we-do');
     }
 
     // What We Do - Regions
@@ -92,10 +94,16 @@ class BhwController extends Controller
     // What We Do - Single Regions
     public function single_region($id) {
         $region = Region::find($id);
+        $ngo = DB::table('ngos')->where('region_id', '=', $region->id)->first();
         $regions = DB::table('regions')->get();
+        $c_members = DB::table('committee_members')->where('region_id', '=', $region->id)->get();
+        $institutions = DB::table('selected_institutions')->where('region_id', '=', $region->id)->get();
         return view('front.regions.single-region', compact(
             'region',
+            'ngo',
             'regions',
+            'c_members',
+            'institutions',
         ));
     }
 

@@ -53,7 +53,7 @@
 
         <li class="treeview">
           <a href="javascript:void(0);">
-            <i class="fa fa-map text-aqua"></i>
+            <i class="fa fa-map text-red"></i>
             <span>Regions</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -62,6 +62,48 @@
           <ul class="treeview-menu">
               <li><a class="nav-link" href="{{ route('all-regions') }}"><i class="fa fa-circle-o text-aqua"></i>All Regions </a></li>
               <li><a class="nav-link" href="{{ route('createRegion') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Region </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-sitemap text-aqua"></i>
+            <span>Host NGO</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-ngo') }}"><i class="fa fa-circle-o text-aqua"></i>All Host NGO </a></li>
+              <li><a class="nav-link" href="{{ route('createNgo') }}"><i class="fa fa-circle-o text-aqua"></i>Create New NGO </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-users text-yellow"></i>
+            <span>Committee Members</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('committee-members') }}"><i class="fa fa-circle-o text-aqua"></i>All Committee Members </a></li>
+              <li><a class="nav-link" href="{{ route('createCommittee-member') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Committee Member </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-users text-aqua"></i>
+            <span>Selected Institutions</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-institution') }}"><i class="fa fa-circle-o text-aqua"></i>All Institutions </a></li>
+              <li><a class="nav-link" href="{{ route('createInstitution') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Institution </a></li>
           </ul>
         </li>
 

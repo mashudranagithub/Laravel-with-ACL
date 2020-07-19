@@ -74,6 +74,36 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::delete('region/delete/{id}', 'RegionController@destroy')->name('deleteRegion');
 
 
+	// NGO Routes Start Here
+	Route::get('all-ngo', 'NgoController@index')->name('all-ngo');
+	Route::get('ngo/create', 'NgoController@create')->name('createNgo');
+	Route::post('ngo/create', 'NgoController@store')->name('storeNgo');
+	Route::get('ngo/edit/{id}', 'NgoController@edit')->name('editNgo');
+	Route::put('ngo/update/{id}', 'NgoController@update')->name('updateNgo');
+	Route::delete('ngo/delete/{id}', 'NgoController@destroy')->name('deleteNgo');
+
+
+
+	// Committee Member Routes Start Here
+	Route::get('committee-members', 'Committee_memberController@index')->name('committee-members');
+	Route::get('committee-member/create', 'Committee_memberController@create')->name('createCommittee-member');
+	Route::post('committee-member/create', 'Committee_memberController@store')->name('storeCommittee-member');
+	Route::get('committee-member/show/{id}', 'Committee_memberController@show')->name('showCommittee-member');
+	Route::get('committee-member/edit/{id}', 'Committee_memberController@edit')->name('editCommittee-member');
+	Route::put('committee-member/update/{id}', 'Committee_memberController@update')->name('updateCommittee-member');
+	Route::delete('committee-member/delete/{id}', 'Committee_memberController@destroy')->name('deleteCommittee-member');
+
+
+	// Selected Institutions Routes Start Here
+	Route::get('all-institution', 'Selected_institutionsController@index')->name('all-institution');
+	Route::get('institution/create', 'Selected_institutionsController@create')->name('createInstitution');
+	Route::post('institution/create', 'Selected_institutionsController@store')->name('storeInstitution');
+	Route::get('institution/show/{id}', 'Selected_institutionsController@show')->name('showInstitution');
+	Route::get('institution/edit/{id}', 'Selected_institutionsController@edit')->name('editInstitution');
+	Route::put('institution/update/{id}', 'Selected_institutionsController@update')->name('updateInstitution');
+	Route::delete('institution/delete/{id}', 'Selected_institutionsController@destroy')->name('deleteInstitution');
+
+
 
 
 

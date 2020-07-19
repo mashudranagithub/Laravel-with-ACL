@@ -22,6 +22,16 @@
 			<button type="button" class="btn btn-success btn-lg"><a style="color: #fff;" href="{{ route('all-regions') }}">All Regions</a></button>
 		</div>
 	</div>
+  
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+  @endif
 
 	@if ($msg = Session::get('msg'))
 	    <div class="alert alert-success">
