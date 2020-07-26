@@ -119,11 +119,11 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="selected-institution" role="tabpanel" aria-labelledby="selected-institution-tab">
-							<div class="region-content">
+							<div class="region-content">	
+											<h4>Selected Institutions of {{ $region->region_name }}</h4>
 								<div class="row">
 									<div class="col-md-12">
-										<div class="region-content">	
-											<h4>Selected Institutions</h4>
+										<div class="region-content" style="margin-top:-20px;">
 											@foreach($institutions as $institution)
 											<div class="single-committee-member">
 												<div class="row">
@@ -147,26 +147,34 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="activities-tab">
-							<div class="d-flex justify-content-between">
-								<div class="region-content institution">
-									<h4>Meeting</h4>
-									<ol>
-										<li>Regional Meeting</li>
-									</ol>
-								</div>
-								<div class="region-content institution">
-									<h4>Advocacy</h4>
-									<ol>
-										<li>Report Launch</li>
-									</ol>
-								</div>
-								<div class="region-content institution">
-									<h4>Campaign</h4>
-									<ol>
-										<li>World Health Day</li>
-									</ol>
+								
+							<div class="region-content">	
+											<h4>Activities of {{ $region->region_name }}</h4>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="region-content" style="margin-top:-20px;">
+											@foreach($activities as $activity)
+											<div class="single-committee-member">
+												<div class="row">
+													<div class="col-md-4">
+														<div class="committee-member-image">
+															<img src="{{ url('front/assets/images/activities/'.$activity->activity_image) }}" alt="Activity Image">
+														</div>
+													</div>
+													<div class="col-md-8">
+														<div class="committee-member-detail region-text">
+															<h5>{{ $activity->activity_title }}</h5>
+															<p class="mb-2">{{ $activity->activity_detail }}</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											@endforeach
+										</div>
+									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 

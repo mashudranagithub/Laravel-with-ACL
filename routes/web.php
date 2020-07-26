@@ -35,6 +35,7 @@ Route::get('/bhw-reports', 'BhwController@bhw_reports')->name('bhw-reports');
 Route::get('/bhw-bulletin', 'BhwController@bhw_bulletin')->name('bhw-bulletin');
 Route::get('/photo-gallery', 'BhwController@photo_gallery')->name('photo-gallery');
 Route::get('/blogs', 'BhwController@blogs')->name('blogs');
+Route::get('single-blog/{id}', 'BhwController@single_blog')->name('single-blog');
 Route::get('/events', 'BhwController@events')->name('events');
 Route::get('/contact', 'BhwController@contact')->name('contact');
 
@@ -102,6 +103,43 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('institution/edit/{id}', 'Selected_institutionsController@edit')->name('editInstitution');
 	Route::put('institution/update/{id}', 'Selected_institutionsController@update')->name('updateInstitution');
 	Route::delete('institution/delete/{id}', 'Selected_institutionsController@destroy')->name('deleteInstitution');
+
+	// Activitiy Routes Start Here
+	Route::get('all-activitiy', 'ActivityController@index')->name('all-activity');
+	Route::get('activitiy/create', 'ActivityController@create')->name('createActivity');
+	Route::post('activitiy/create', 'ActivityController@store')->name('storeActivity');
+	Route::get('activitiy/show/{id}', 'ActivityController@show')->name('showActivity');
+	Route::get('activitiy/edit/{id}', 'ActivityController@edit')->name('editActivity');
+	Route::put('activitiy/update/{id}', 'ActivityController@update')->name('updateActivity');
+	Route::delete('activitiy/delete/{id}', 'ActivityController@destroy')->name('deleteActivity');
+
+	// Report Routes Start Here
+	Route::get('reports', 'ReportController@index')->name('reports');
+	Route::get('report/create', 'ReportController@create')->name('createReport');
+	Route::post('report/create', 'ReportController@store')->name('storeReport');
+	Route::get('report/show/{id}', 'ReportController@show')->name('showReport');
+	Route::get('report/edit/{id}', 'ReportController@edit')->name('editReport');
+	Route::put('report/update/{id}', 'ReportController@update')->name('updateReport');
+	Route::delete('report/delete/{id}', 'ReportController@destroy')->name('deleteReport');
+
+	// Bulletin Routes Start Here
+	Route::get('bulletins', 'BulletinController@index')->name('bulletins');
+	Route::get('bulletin/create', 'BulletinController@create')->name('createBulletin');
+	Route::post('bulletin/create', 'BulletinController@store')->name('storeBulletin');
+	Route::get('bulletin/show/{id}', 'BulletinController@show')->name('showBulletin');
+	Route::get('bulletin/edit/{id}', 'BulletinController@edit')->name('editBulletin');
+	Route::put('bulletin/update/{id}', 'BulletinController@update')->name('updateBulletin');
+	Route::delete('bulletin/delete/{id}', 'BulletinController@destroy')->name('deleteBulletin');
+
+
+	// Bulletin Routes Start Here
+	Route::get('all-blogs', 'BlogController@index')->name('all-blogs');
+	Route::get('blog/create', 'BlogController@create')->name('createBlog');
+	Route::post('blog/create', 'BlogController@store')->name('storeBlog');
+	Route::get('blog/show/{id}', 'BlogController@show')->name('showBlog');
+	Route::get('blog/edit/{id}', 'BlogController@edit')->name('editBlog');
+	Route::put('blog/update/{id}', 'BlogController@update')->name('updateBlog');
+	Route::delete('blog/delete/{id}', 'BlogController@destroy')->name('deleteBlog');
 
 
 

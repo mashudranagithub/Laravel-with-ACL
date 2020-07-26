@@ -39,7 +39,7 @@
                   <label for="member-image">Member Image</label>
                   <input name="member_image" type="file" id="member-image" required>
 
-                  <p class="help-block text-red">Size: 400px width and 350px height and compress the image from <a target="_blank" href="https://tinypng.com/">here</a> before upload</p>
+                  <p class="help-block text-red">Size: 688px width and 655px height and compress the image from <a target="_blank" href="https://tinypng.com/">here</a> before upload</p>
                 </div>
                 <div class="form-group">
                   <label for="member-name">Member Name</label>

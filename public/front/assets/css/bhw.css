@@ -642,6 +642,14 @@ section#Events a.view-all {
 
 .single-blog-image {
     position: relative;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+
+
+.single-blog-image img {
+    min-height: 200px;
 }
 
 .single-blog-image .date {
@@ -723,6 +731,42 @@ span.total-comments::before {
 p.blog-meta span.author a {
     color: #000 !important;
 }
+
+
+
+section#single-Blog {
+    border-top: 1px solid #ddd;
+    padding: 35px 0;
+}
+
+section#single-Blog h3 {
+    margin: 30px 0 15px;
+    letter-spacing: 1px;
+}
+
+section#single-Blog h2 {
+    margin-bottom: 25px;
+}
+
+section#single-Blog img {
+    width: 100% !important;
+}
+
+section#single-Blog .blog-meta,
+section#single-Blog .blog-info {
+    padding: 15px 20px 0;
+    background: #fafbfc;
+}
+
+
+section#single-Blog .blog-info {
+    padding-bottom: 20px;
+}
+
+section#single-Blog .blog-info p {
+    margin-bottom: 10px;
+}
+
 
 /*blogs End Here*/
 
@@ -1110,6 +1154,8 @@ section#Bulletin {
     bottom: 0;
     color: #fff;
     padding: 15px 20px;
+    background: rgb(0 0 0 / 0.5);
+    box-shadow: 5px -5px 10px 0px rgb(0 0 0 / 0.5);
 }
 
 .single-bulletin a.btn-download {

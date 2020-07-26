@@ -107,8 +107,66 @@
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-tasks text-yellow"></i>
+            <span>Activities</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-activity') }}"><i class="fa fa-circle-o text-aqua"></i>All Activities</a></li>
+              <li><a class="nav-link" href="{{ route('createActivity') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Activity </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-file text-red"></i>
+            <span>Reports</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('reports') }}"><i class="fa fa-circle-o text-aqua"></i>All Reports</a></li>
+              <li><a class="nav-link" href="{{ route('createReport') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Report </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-book text-yellow"></i>
+            <span>Bulletins</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('bulletins') }}"><i class="fa fa-circle-o text-aqua"></i>All Bulletin</a></li>
+              <li><a class="nav-link" href="{{ route('createBulletin') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Bulletin </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-rss-square text-aqua"></i>
+            <span>Blogs</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-blogs') }}"><i class="fa fa-circle-o text-aqua"></i>All Blogs</a></li>
+              <li><a class="nav-link" href="{{ route('createBlog') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Blog </a></li>
+          </ul>
+        </li>
 
 
+
+
+        
 
 
 

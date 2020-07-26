@@ -7,6 +7,10 @@ use App\Group_member;
 use App\Committee_member;
 use App\Region;
 use App\Selected_institution;
+use App\Activity;
+use App\Report;
+use App\Bulletin;
+use App\Blog;
 use DB;
 use Session;
 
@@ -98,12 +102,14 @@ class BhwController extends Controller
         $regions = DB::table('regions')->get();
         $c_members = DB::table('committee_members')->where('region_id', '=', $region->id)->get();
         $institutions = DB::table('selected_institutions')->where('region_id', '=', $region->id)->get();
+        $activities = DB::table('activities')->where('region_id', '=', $region->id)->get();
         return view('front.regions.single-region', compact(
             'region',
             'ngo',
             'regions',
             'c_members',
             'institutions',
+            'activities',
         ));
     }
 
@@ -112,13 +118,21 @@ class BhwController extends Controller
 
     // BHW Reports
     public function bhw_reports() {
-        return view('front.reports.bhw-reports');
+        $reports = Report::orderBy('id', 'DESC')->get();
+        $bulletins = Bulletin::orderBy('id', 'DESC')->get();
+        return view('front.reports.bhw-reports', compact(
+            'reports',
+            'bulletins',
+        ));
     }
 
 
     // BHW Bulletin
     public function bhw_bulletin() {
-        return view('front.reports.bhw-bulletin');
+        $bulletins = Bulletin::orderBy('id', 'DESC')->get();
+        return view('front.reports.bhw-bulletin', compact(
+            'bulletins',
+        ));
     }
 
 
@@ -130,7 +144,20 @@ class BhwController extends Controller
 
     // BHW Blogs
     public function blogs() {
-        return view('front.blogs');
+        // $blogs = DB::table('blogs')->orderBy('created_at', 'DESC')->paginate(1);
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(6);
+        return view('front.blog.blogs', compact(
+            'blogs',
+        ));
+    }
+
+
+    // BHW Single Blog
+    public function single_blog($id) {
+        $blog = Blog::find($id);
+        return view('front.blog.single-blog', compact(
+            'blog',
+        ));
     }
 
     // BHW Events

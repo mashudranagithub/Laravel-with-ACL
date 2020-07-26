@@ -20,78 +20,22 @@
 
 <section id="Report">
 	<div class="container">
+		@foreach($reports as $report)
 		<!-- Single report start here -->
 		<div class="row">
 			<div class="col-md-9">
 				<div class="bhw-single-report">
-					<a href="#" target="_blank">Bangladesh Health Watch Report 2016</a>
+					<a href="{{ url('front/assets/files/report/'.$report->report_file) }}" target="_blank">{{ $report->report_title }}</a>
 				</div>
 			</div>
 			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
+				<a href="{{ url('front/assets/files/report/'.$report->report_file) }}" class="btn btn-download report" download>Download</a>
 			</div>
 		</div>
 		<!-- single report end here -->
-		<!-- Single report start here -->
-		<div class="row">
-			<div class="col-md-9">
-				<div class="bhw-single-report">
-					<a href="#" target="_blank">Bangladesh Health Watch Report 2014</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
-			</div>
-		</div>
-		<!-- single report end here -->
-		<!-- Single report start here -->
-		<div class="row">
-			<div class="col-md-9">
-				<div class="bhw-single-report">
-					<a href="#" target="_blank">Bangladesh Health Watch Report 2011</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
-			</div>
-		</div>
-		<!-- single report end here -->
-		<!-- Single report start here -->
-		<div class="row">
-			<div class="col-md-9">
-				<div class="bhw-single-report">
-					<a href="#" target="_blank">Bangladesh Health Watch Report 2009</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
-			</div>
-		</div>
-		<!-- single report end here -->
-		<!-- Single report start here -->
-		<div class="row">
-			<div class="col-md-9">
-				<div class="bhw-single-report">
-					<a href="#" target="_blank">The State of Health in Bangladesh 2007</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
-			</div>
-		</div>
-		<!-- single report end here -->
-		<!-- Single report start here -->
-		<div class="row">
-			<div class="col-md-9">
-				<div class="bhw-single-report">
-					<a href="#" target="_blank">The State of Health in Bangladesh 2006</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<a href="#" class="btn btn-download report">Download</a>
-			</div>
-		</div>
-		<!-- single report end here -->
+		@endforeach
+		
+
 	</div>
 </section>
 
@@ -99,54 +43,20 @@
 <section id="Bulletin">
 	<div class="container">
 		<div class="row">
+			@foreach($bulletins as $bulletin)
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2013.jpg') }}" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/'.$bulletin->bulletin_image) }}" alt="BHW Bulletin Image">
 						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2013</p>
+							<h4>{{ $bulletin->bulletin_title }}</h4>
+							<p>{{ $bulletin->bulletin_month_year }}</p>
 						</div>
 					</div>
-					<a href="#" class="btn btn-download">Download</a>
+					<a href="{{ url('front/assets/files/bulletin/'.$bulletin->bulletin_file) }}" class="btn btn-download" download>Download</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2014.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2014</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2015.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2015</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2016.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2016</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>

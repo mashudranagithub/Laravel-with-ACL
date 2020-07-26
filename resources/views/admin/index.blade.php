@@ -27,7 +27,7 @@
               <p>Group Members</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="fa fa-users"></i>
             </div>
             <a href="{{ route('group-members') }}" class="small-box-footer">Show All <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -42,7 +42,7 @@
               <p>Regions</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="fa fa-map"></i>
             </div>
             <a href="{{ route('all-regions') }}" class="small-box-footer">Regions info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -57,7 +57,7 @@
               <p>Committee Members</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fa fa-users"></i>
             </div>
             <a href="{{ route('committee-members') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -67,14 +67,14 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>{{ $institution_numbers }}</h3>
 
-              <p>Unique Visitors</p>
+              <p>Selected Institutions</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="fa fa-sitemap"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('all-institution') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

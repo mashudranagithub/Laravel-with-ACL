@@ -147,6 +147,7 @@ class Selected_institutionsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table("selected_institutions")->where('id',$id)->delete();
+        return redirect()->route('all-institution')->with('msg','Institution deleted successfully');
     }
 }

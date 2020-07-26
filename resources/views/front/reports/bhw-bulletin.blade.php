@@ -21,54 +21,20 @@
 <section id="Bulletin">
 	<div class="container">
 		<div class="row">
+			@foreach($bulletins as $bulletin)
 			<div class="col-md-3">
 				<div class="single-bulletin">
 					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2013.jpg') }}" alt="BHW Bulletin Image">
+						<img src="{{ url ('front/assets/images/bulletin/'.$bulletin->bulletin_image) }}" alt="BHW Bulletin Image">
 						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2013</p>
+							<h4>{{ $bulletin->bulletin_title }}</h4>
+							<p>{{ $bulletin->bulletin_month_year }}</p>
 						</div>
 					</div>
-					<a href="#" class="btn btn-download">Download</a>
+					<a href="{{ url('front/assets/files/bulletin/'.$bulletin->bulletin_file) }}" class="btn btn-download" download>Download</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2014.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2014</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2015.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2015</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="single-bulletin">
-					<div class="bulletin-image">
-						<img src="{{ url ('front/assets/images/bulletin/jan-2016.jpg') }}" alt="BHW Bulletin Image">
-						<div class="name-year">
-							<h4>BHW Bulletin</h4>
-							<p>Jan 2016</p>
-						</div>
-					</div>
-					<a href="#" class="btn btn-download">Download</a>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>

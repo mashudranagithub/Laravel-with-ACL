@@ -18,6 +18,7 @@ class Group_memberController extends Controller
     {
 
         $members = DB::table('group_members')->orderBy('id')->get();
+
         return view('admin.group-members.index', compact(
             'members',
         ));

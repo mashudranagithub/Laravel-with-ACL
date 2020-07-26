@@ -3,11 +3,20 @@
 </div>
 <!-- ./wrapper -->
 
+
+
+
 <!-- jQuery 3 -->
 <script src="{{ asset ('admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{ asset ('admin/bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+
+<!-- Upload file progress bar scripts -->
+
+
+
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
@@ -34,11 +43,108 @@
 <script src="{{ asset ('admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
 <script src="{{ asset ('admin/bower_components/fastclick/lib/fastclick.js') }}"></script>
+
+<script src="{{ asset ('admin/bower_components/ckeditor/ckeditor.js') }}"></script>
+
+<script>
+CKEDITOR.replace( 'bhw-ckeditor' );
+</script>
+
+
+
+
 <!-- AdminLTE App -->
 <script src="{{ asset ('admin/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset ('admin/dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset ('admin/dist/js/demo.js') }}"></script>
+
+
+<!-- File upload from forms -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+
+
+<script>
+$(document).ready(function(){
+
+    $('form#report').ajaxForm({
+      beforeSend:function(){
+        $('#success').empty();
+        $('button.btn.btn-primary').hide();
+        $('h3.uploading-text').show();
+      },
+      uploadProgress:function(event, position, total, percentComplete)
+      {
+        $('.progress-bar').text(percentComplete + '%');
+        $('.progress-bar').css('width', percentComplete + '%');
+      },
+
+      success:function(data)
+      {
+        
+        if(data.errors)
+        {
+          $('.progress-bar').text('0%');
+          $('.progress-bar').css('width', '0%');
+          $('#success').html('<span class="text-danger"><b>'+data.errors+'</b></span>');
+        }
+        if(data.success)
+        {
+          $('.progress-bar').text('Uploaded');
+          $('.progress-bar').css('width', '100%');
+
+          $('#success').html('<span class="text-success"><b>'+data.success+'</b></span><br /><br />');
+          $('#success').append(data.image);
+        }
+      window.location.replace("/reports");
+      }
+    });
+
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+    $('form#bulletin').ajaxForm({
+      beforeSend:function(){
+        $('#success').empty();
+        $('button.btn.btn-primary').hide();
+        $('h3.uploading-text').show();
+      },
+      uploadProgress:function(event, position, total, percentComplete)
+      {
+        $('.progress-bar').text(percentComplete + '%');
+        $('.progress-bar').css('width', percentComplete + '%');
+      },
+
+      success:function(data)
+      {
+        
+        if(data.errors)
+        {
+          $('.progress-bar').text('0%');
+          $('.progress-bar').css('width', '0%');
+          $('#success').html('<span class="text-danger"><b>'+data.errors+'</b></span>');
+        }
+        if(data.success)
+        {
+          $('.progress-bar').text('Uploaded');
+          $('.progress-bar').css('width', '100%');
+
+          $('#success').html('<span class="text-success"><b>'+data.success+'</b></span><br /><br />');
+          $('#success').append(data.image);
+        }
+      window.location.replace("/bulletins");
+      }
+
+    });
+
+});
+</script>
+
+
 </body>
 </html>
