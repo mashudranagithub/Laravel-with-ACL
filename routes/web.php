@@ -27,6 +27,9 @@ Route::get('single-member/{id}', 'BhwController@single_member')->name('single-me
 
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
 
+
+Route::get('publications', 'BhwController@bhw_publication')->name('publications');
+
 // Region View Routes
 Route::get('/regions', 'BhwController@regions')->name('regions');
 Route::get('/single-region/{id}', 'BhwController@single_region')->name('single-region');
@@ -156,6 +159,17 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('event/edit/{id}', 'EventController@edit')->name('editEvent');
 	Route::put('event/update/{id}', 'EventController@update')->name('updateEvent');
 	Route::delete('event/delete/{id}', 'EventController@destroy')->name('deleteEvent');
+
+
+
+	// Publication Routes Start Here
+	Route::get('all-publications', 'PublicationController@index')->name('all-publications');
+	Route::get('publication/create', 'PublicationController@create')->name('createPublication');
+	Route::post('publication/create', 'PublicationController@store')->name('storePublication');
+	Route::get('publication/show/{id}', 'PublicationController@show')->name('showPublication');
+	Route::get('publication/edit/{id}', 'PublicationController@edit')->name('editPublication');
+	Route::put('publication/update/{id}', 'PublicationController@update')->name('updatePublication');
+	Route::delete('publication/delete/{id}', 'PublicationController@destroy')->name('deletePublication');
 
 
 

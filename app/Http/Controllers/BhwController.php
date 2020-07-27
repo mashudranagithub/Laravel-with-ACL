@@ -12,6 +12,7 @@ use App\Report;
 use App\Bulletin;
 use App\Blog;
 use App\Event;
+use App\Publication;
 use DB;
 use Session;
 
@@ -138,6 +139,15 @@ class BhwController extends Controller
         $bulletins = Bulletin::orderBy('id', 'DESC')->get();
         return view('front.reports.bhw-bulletin', compact(
             'bulletins',
+        ));
+    }
+
+
+    // Bhw Publication
+    public function bhw_publication() {
+        $publications = Publication::orderBy('created_at', 'desc')->paginate(10);
+        return view('front.publication.publications', compact(
+            'publications',
         ));
     }
 

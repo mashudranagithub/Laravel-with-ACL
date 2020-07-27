@@ -177,6 +177,20 @@
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-book text-aqua"></i>
+            <span>Publication</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-publications') }}"><i class="fa fa-circle-o text-aqua"></i>All Publications</a></li>
+              <li><a class="nav-link" href="{{ route('createPublication') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Publication</a></li>
+          </ul>
+        </li>
+
 
 
 

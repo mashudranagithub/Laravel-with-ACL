@@ -1652,3 +1652,31 @@ section#Projects .single-work.full-box {
     margin-bottom: 30px;
 }
 /*Our Projects layout End Here*/
+
+
+
+
+/*Publication page css start here*/
+
+section#Publication.gray {
+    padding: 35px 0;
+}
+
+section#Publication.gray .single-publication {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+section#Publication.gray .single-publication h3 {
+    letter-spacing: 1px;
+}
+
+section#Publication.gray .single-publication a.newspaper-name {
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/*Publication page end here*/
