@@ -29,7 +29,7 @@
 <section class="content">
   <div class="row" style="margin-bottom:30px;">
     <div class="col-md-12 text-right">
-      <button type="button" class="btn btn-success btn-lg"><a style="color: #fff;" href="{{ route('blogs') }}">All Blogs</a></button>
+      <button type="button" class="btn btn-success btn-lg"><a style="color: #fff;" href="{{ route('all-blogs') }}">All Blogs</a></button>
     </div>
   </div>
 	<div class="row">
@@ -42,6 +42,7 @@
           <div class="form-group">
             <label for="blog-image">Blog Image</label>
             <input name="blog_image" type="file" class="form-control" id="blog-image" placeholder="Bulletin Image" accept=".jpg, .jpeg" required>
+            <p class="help-block text-red">Size: 1110px width and 625px height and compress the image from <a target="_blank" href="https://tinypng.com/">here</a> before upload</p>
           </div>
           <div class="form-group">
             <label for="blog_title">Blog Title</label>

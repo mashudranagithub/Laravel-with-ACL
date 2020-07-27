@@ -46,6 +46,7 @@
             @endif
             <label for="blog-image">Blog Image</label>
             <input name="blog_image" type="file" class="form-control" id="blog-image" placeholder="Bulletin Image" accept=".jpg, .jpeg">
+            <p class="help-block text-red">Size: 1110px width and 625px height and compress the image from <a target="_blank" href="https://tinypng.com/">here</a> before upload</p>
           </div>
           <div class="form-group">
             <label for="blog_title">Blog Title</label>

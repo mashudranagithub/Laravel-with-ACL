@@ -178,8 +178,8 @@
 						<div class="col-md-5">
 							<div class="section-heading">
 								<h2>Bangladesh Health Watch (BHW)</h2>
-								<a href="bhw-bulletin.php" class="btn btn-bhw btn-link">Bulletin</a>
-								<a href="bhw-report.php" class="btn btn-bhw btn-link">Report</a>
+								<a href="{{ route('bhw-bulletin') }}" class="btn btn-bhw btn-link">Bulletin</a>
+								<a href="{{ route('bhw-reports') }}" class="btn btn-bhw btn-link">Report</a>
 							</div>
 						</div>
 					</div>
@@ -200,73 +200,40 @@
 					</div>
 				</div>
 				<div class="row">
+
+
+					@foreach($events as $event)
 					<div class="col-md-4">
 						<div class="single-event full-box">
 							<div class="single-event-image image-box">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
+								<a href="{{ route('single-event', $event->id) }}">
+									<img src="{{ url ('front/assets/images/event/'.$event->event_image) }}" alt="Event Image">
 								</a>
-								<span class="status">Upcoming</span>
+								@if($event->event_status !== 'previous')
+								<span class="status">{{ $event->event_status }}</span>
+								@endif
 							</div>
 							<div class="single-event-info info-box">
-								<p class="event-date">May 29, 2020</p>
-								<h3><a href="javascript:void(0);">BHW partner meeting</a></h3>
+								<p class="event-date">{{ $event->event_date }}</p>
+								<h3><a href="{{ route('single-event', $event->id) }}">{{ Illuminate\Support\Str::limit($event->event_title, 35) }}</a></h3>
 								<p class="time-venue">
 									<!-- Ei gulor pseudo element a icon hobe -->
-									<span class="event-time float-left">9:30AM-2:00PM</span>
-									<span class="event-venue float-right">James P Grant School</span>
+									<span class="event-time float-left">{{ $event->event_start_time }} - {{ $event->event_end_time }}</span>
+									<span class="event-venue float-right">{{ Illuminate\Support\Str::limit($event->event_place, 20) }}</span>
 								</p>
-								<p class="event-info">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-								<a href="javascript:void(0);" class="know-more">Know more about event</a>
+								<p class="event-info">{!! Illuminate\Support\Str::limit($event->event_detail, 150) !!}</p>
+								<a href="{{ route('single-event', $event->id) }}" class="know-more">Know more about event</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="single-event full-box">
-							<div class="single-event-image image-box">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/events/event-2.jpg') }}" alt="Event Image">
-								</a>
-							</div>
-							<div class="single-event-info info-box">
-								<p class="event-date">Apr 25, 2020</p>
-								<h3><a href="javascript:void(0);">BHW partner meeting</a></h3>
-								<p class="time-venue">
-									<!-- Ei gulor pseudo element a icon hobe -->
-									<span class="event-time float-left">9:30AM-2:00PM</span>
-									<span class="event-venue float-right">James P Grant School</span>
-								</p>
-								<p class="event-info">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-								<a href="javascript:void(0);" class="know-more">Know more about event</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-event full-box">
-							<div class="single-event-image image-box">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/events/event-1.jpg') }}" alt="Event Image">
-								</a>
-							</div>
-							<div class="single-event-info info-box">
-								<p class="event-date">Apr 25, 2020</p>
-								<h3><a href="javascript:void(0);">BHW partner meeting</a></h3>
-								<p class="time-venue">
-									<!-- Ei gulor pseudo element a icon hobe -->
-									<span class="event-time float-left">9:30AM-2:00PM</span>
-									<span class="event-venue float-right">James P Grant School</span>
-								</p>
-								<p class="event-info">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-								<a href="javascript:void(0);" class="know-more">Know more about event</a>
-							</div>
-						</div>
-					</div>
+					@endforeach
+
 				</div>
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<a href="events.php" class="view-all">All Events</a>
+						<a href="{{ route('events') }}" class="view-all">All Events</a>
 					</div>
 				</div>
 			</div>
@@ -285,79 +252,40 @@
 					</div>
 				</div>
 				<div class="row">
+
+
+					@foreach($blogs as $blog)
 					<div class="col-md-4">
 						<div class="single-blog">
 							<div class="single-blog-image">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
+								<a href="{{ route('single-blog', $blog->id) }}">
+									<img src="{{ url('front/assets/images/blog/'.$blog->blog_image) }}" alt="Blog Image">
 								</a>
 								<div class="date">
-									<span class="publish-date">15</span>
+									<span class="publish-date">{{ $blog->created_at->format('d') }}</span>
 									<br>
-									<span class="publish-month">May</span>
+									<span class="publish-month">{{ $blog->created_at->format('M') }}</span>
 								</div>
 							</div>
 							<div class="single-blog-info">
-								<h3><a href="javascript:void(0);">we are all same under the sky</a></h3>
+								<h3><a href="{{ route('single-blog', $blog->id) }}">{{ Illuminate\Support\Str::limit($blog->blog_title, 35) }}</a></h3>
 								<p class="blog-meta">
-									<span class="author flot-left">By: <a href="javascript:void(0);">Mashud Rana</a></span>
-									<span class="total-comments float-right">3</span>
+									<span class="author flot-left">By: <a href="javascript:void(0);">{{ $blog->blog_admin }}</a></span>
+									<!-- <span class="total-comments float-right">3</span> -->
 								</p>
-								<p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei, hinc partem ei est. Eos ei nisl graecis, vix aperiri dis apadum naitri.</p>
-								<a href="javascript:void(0);" class="know-more">Know more</a>
+								
+								{!! Illuminate\Support\Str::limit($blog->blog_detail, 150) !!}
+								
+								<br><a href="{{ route('single-blog', $blog->id) }}" class="know-more">Know more</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="single-blog">
-							<div class="single-blog-image">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
-								</a>
-								<div class="date">
-									<span class="publish-date">15</span>
-									<br>
-									<span class="publish-month">May</span>
-								</div>
-							</div>
-							<div class="single-blog-info">
-								<h3><a href="javascript:void(0);">we are all same under the sky</a></h3>
-								<p class="blog-meta">
-									<span class="author flot-left">By: <a href="javascript:void(0);">Mashud Rana</a></span>
-									<span class="total-comments float-right">3</span>
-								</p>
-								<p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei, hinc partem ei est. Eos ei nisl graecis, vix aperiri dis apadum naitri.</p>
-								<a href="javascript:void(0);" class="know-more">Know more</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-blog">
-							<div class="single-blog-image">
-								<a href="javascript:void(0);">
-									<img src="{{ url ('front/assets/images/blog/blog-1.jpg') }}" alt="Blog Image">
-								</a>
-								<div class="date">
-									<span class="publish-date">15</span>
-									<br>
-									<span class="publish-month">May</span>
-								</div>
-							</div>
-							<div class="single-blog-info">
-								<h3><a href="javascript:void(0);">we are all same under the sky</a></h3>
-								<p class="blog-meta">
-									<span class="author flot-left">By: <a href="javascript:void(0);">Mashud Rana</a></span>
-									<span class="total-comments float-right">3</span>
-								</p>
-								<p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei, hinc partem ei est. Eos ei nisl graecis, vix aperiri dis apadum naitri.</p>
-								<a href="javascript:void(0);" class="know-more">Know more</a>
-							</div>
-						</div>
-					</div>
+					@endforeach
+
 				</div>
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<a href="blog.php" class="view-all">View All</a>
+						<a href="{{ route('blogs') }}" class="view-all">View All</a>
 					</div>
 				</div>
 			</div>

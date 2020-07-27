@@ -33,10 +33,15 @@ Route::get('/single-region/{id}', 'BhwController@single_region')->name('single-r
 
 Route::get('/bhw-reports', 'BhwController@bhw_reports')->name('bhw-reports');
 Route::get('/bhw-bulletin', 'BhwController@bhw_bulletin')->name('bhw-bulletin');
+
 Route::get('/photo-gallery', 'BhwController@photo_gallery')->name('photo-gallery');
+
 Route::get('/blogs', 'BhwController@blogs')->name('blogs');
 Route::get('single-blog/{id}', 'BhwController@single_blog')->name('single-blog');
+
 Route::get('/events', 'BhwController@events')->name('events');
+Route::get('single-event/{id}', 'BhwController@single_event')->name('single-event');
+
 Route::get('/contact', 'BhwController@contact')->name('contact');
 
 
@@ -140,6 +145,17 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('blog/edit/{id}', 'BlogController@edit')->name('editBlog');
 	Route::put('blog/update/{id}', 'BlogController@update')->name('updateBlog');
 	Route::delete('blog/delete/{id}', 'BlogController@destroy')->name('deleteBlog');
+
+
+
+	// Events Routes Start Here
+	Route::get('all-events', 'EventController@index')->name('all-events');
+	Route::get('event/create', 'EventController@create')->name('createEvent');
+	Route::post('event/create', 'EventController@store')->name('storeEvent');
+	Route::get('event/show/{id}', 'EventController@show')->name('showEvent');
+	Route::get('event/edit/{id}', 'EventController@edit')->name('editEvent');
+	Route::put('event/update/{id}', 'EventController@update')->name('updateEvent');
+	Route::delete('event/delete/{id}', 'EventController@destroy')->name('deleteEvent');
 
 
 

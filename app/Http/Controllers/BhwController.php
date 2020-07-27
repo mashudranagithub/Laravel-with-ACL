@@ -11,6 +11,7 @@ use App\Activity;
 use App\Report;
 use App\Bulletin;
 use App\Blog;
+use App\Event;
 use DB;
 use Session;
 
@@ -18,7 +19,12 @@ class BhwController extends Controller
 {
     // Homepage 
     public function index() {
-        return view('front.index');
+        $events = Event::orderBy('created_at', 'desc')->take(3)->get();
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        return view('front.index', compact(
+            'events',
+            'blogs',
+        ));
     }
 
 
@@ -162,7 +168,20 @@ class BhwController extends Controller
 
     // BHW Events
     public function events() {
-        return view('front.events');
+        $events = Event::orderBy('created_at', 'desc')->paginate(6);
+        return view('front.event.events', compact(
+            'events',
+        ));
+    }
+
+
+    // BHW Single Event
+    public function single_event($id) {
+        $event = Event::find($id);
+        // dd($event);
+        return view('front.event.single-event', compact(
+            'event',
+        ));
     }
 
     // BHW Contact
