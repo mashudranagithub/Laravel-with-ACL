@@ -159,7 +159,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<a href="projects.php" class="view-all">All works</a>
+						<a href="{{ route('projects') }}" class="view-all">All works</a>
 					</div>
 				</div>
 			</div>

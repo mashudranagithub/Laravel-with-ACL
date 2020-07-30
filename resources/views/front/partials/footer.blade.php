@@ -16,7 +16,7 @@
 
 						<ul class="footer-social-menu">
 							<li>
-								<a href="javascript:void(0);">
+								<a target="_blank" href="https://www.facebook.com/Bangladesh-Health-Watch-BHW-109403770656047">
 									<i class="fa fa-facebook"></i>
 								</a>
 							</li>
@@ -36,7 +36,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);">
+								<a target="_blank" href="https://www.youtube.com/channel/UC0Uf5r2je-CQG-506n0l5_g">
 									<i class="fa fa-youtube"></i>
 								</a>
 							</li>

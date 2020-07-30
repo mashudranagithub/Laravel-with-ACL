@@ -20,164 +20,23 @@
 		<div class="row">
 
 		</div>
-		<div class="row">
+		<div class="row gallery">
+
+			@foreach($photos as $photo)
 			<div class="col-md-3">
 				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
+					<a href="{{ url ('front/assets/images/photo/'.$photo->photo) }}">
+						<img src="{{ url ('front/assets/images/photo/'.$photo->photo) }}" alt="Gallery Image">
 					</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/Photo-Gallery-2.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="gallery-item">
-					<a href="javascript:void(0);">
-						<img src="{{ url ('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-					</a>
-				</div>
-			</div>
+			@endforeach
+
 		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="bhw-pagination">
-					<nav aria-label="Page navigation example">
-						<ul class="pagination justify-content-end">
-							<li class="page-item disabled">
-								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
-							<a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
-					</nav>
+					{{ $photos->links() }}
 				</div>
 			</div>
 

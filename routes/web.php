@@ -27,8 +27,20 @@ Route::get('single-member/{id}', 'BhwController@single_member')->name('single-me
 
 Route::get('/what-we-do', 'BhwController@what_we_do')->name('what-we-do');
 
+Route::get('/research', 'BhwController@bhw_research')->name('research');
+Route::get('single-research/{id}', 'BhwController@bhw_single_research')->name('single-research');
 
-Route::get('publications', 'BhwController@bhw_publication')->name('publications');
+Route::get('/short-courses', 'BhwController@bhw_short_courses')->name('short-courses');
+Route::get('/single-course/{id}', 'BhwController@bhw_single_course')->name('single-course');
+
+Route::get('/policy-advocacy', 'BhwController@bhw_policy_advocacy')->name('policy-advocacy');
+Route::get('/networking', 'BhwController@bhw_networking')->name('networking');
+Route::get('/strategic-plan', 'BhwController@bhw_strategic_plan')->name('strategic-plan');
+
+Route::get('projects', 'BhwController@bhw_projects')->name('projects');
+
+
+Route::get('/publications', 'BhwController@bhw_publication')->name('publications');
 
 // Region View Routes
 Route::get('/regions', 'BhwController@regions')->name('regions');
@@ -170,6 +182,35 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('publication/edit/{id}', 'PublicationController@edit')->name('editPublication');
 	Route::put('publication/update/{id}', 'PublicationController@update')->name('updatePublication');
 	Route::delete('publication/delete/{id}', 'PublicationController@destroy')->name('deletePublication');
+
+
+
+	// Research Routes Start Here
+	Route::get('all-research', 'ResearchController@index')->name('all-research');
+	Route::get('research/create', 'ResearchController@create')->name('createResearch');
+	Route::post('research/create', 'ResearchController@store')->name('storeResearch');
+	Route::get('research/show/{id}', 'ResearchController@show')->name('showResearch');
+	Route::get('research/edit/{id}', 'ResearchController@edit')->name('editResearch');
+	Route::put('research/update/{id}', 'ResearchController@update')->name('updateResearch');
+	Route::delete('research/delete/{id}', 'ResearchController@destroy')->name('deleteResearch');
+
+	// Courses Routes Start Here
+	Route::get('all-courses', 'CourseController@index')->name('all-courses');
+	Route::get('course/create', 'CourseController@create')->name('createCourse');
+	Route::post('course/create', 'CourseController@store')->name('storeCourse');
+	Route::get('course/show/{id}', 'CourseController@show')->name('showCourse');
+	Route::get('course/edit/{id}', 'CourseController@edit')->name('editCourse');
+	Route::put('course/update/{id}', 'CourseController@update')->name('updateCourse');
+	Route::delete('course/delete/{id}', 'CourseController@destroy')->name('deleteCourse');
+
+	// Photo Routes Start Here
+	Route::get('all-photos', 'PhotoController@index')->name('all-photos');
+	Route::get('photo/create', 'PhotoController@create')->name('createPhoto');
+	Route::post('photo/create', 'PhotoController@store')->name('storePhoto');
+	Route::get('photo/show/{id}', 'PhotoController@show')->name('showPhoto');
+	Route::get('photo/edit/{id}', 'PhotoController@edit')->name('editPhoto');
+	Route::put('photo/update/{id}', 'PhotoController@update')->name('updatePhoto');
+	Route::delete('photo/delete/{id}', 'PhotoController@destroy')->name('deletePhoto');
 
 
 

@@ -179,6 +179,20 @@
 
         <li class="treeview">
           <a href="javascript:void(0);">
+            <i class="fa fa-book text-red"></i>
+            <span>Research</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-research') }}"><i class="fa fa-circle-o text-aqua"></i>All Research</a></li>
+              <li><a class="nav-link" href="{{ route('createResearch') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Research</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
             <i class="fa fa-book text-aqua"></i>
             <span>Publication</span>
             <span class="pull-right-container">
@@ -188,6 +202,34 @@
           <ul class="treeview-menu">
               <li><a class="nav-link" href="{{ route('all-publications') }}"><i class="fa fa-circle-o text-aqua"></i>All Publications</a></li>
               <li><a class="nav-link" href="{{ route('createPublication') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Publication</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-graduation-cap text-yellow"></i>
+            <span>Course</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-courses') }}"><i class="fa fa-circle-o text-aqua"></i>All Courses</a></li>
+              <li><a class="nav-link" href="{{ route('createCourse') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Course</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="javascript:void(0);">
+            <i class="fa fa-picture-o text-red"></i>
+            <span>Photo Gallery</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a class="nav-link" href="{{ route('all-photos') }}"><i class="fa fa-circle-o text-aqua"></i>All Photos</a></li>
+              <li><a class="nav-link" href="{{ route('createPhoto') }}"><i class="fa fa-circle-o text-aqua"></i>Add Gallery Photo</a></li>
           </ul>
         </li>
 

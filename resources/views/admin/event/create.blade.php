@@ -81,7 +81,7 @@
         <!-- /.box-body -->
 
         <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Blog Post Create</button>
+          <button type="submit" class="btn btn-primary">Event Create</button>
         </div>
       </form>
 		</div>

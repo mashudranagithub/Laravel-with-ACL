@@ -28,7 +28,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);">
+										<a target="_blank" href="https://www.youtube.com/channel/UC0Uf5r2je-CQG-506n0l5_g">
 											<i class="fa fa-youtube"></i>
 										</a>
 									</li>
@@ -68,14 +68,14 @@
 		                                    <li class="first-drop-menu">
 		                                        <a href="{{ route('what-we-do') }}">What we do</a>
 		                                        <ul class="first-dropped-menu">
-		                                            <li><a href="research.php">Research</a></li>
+		                                            <li><a href="{{ route('research') }}">Research</a></li>
 		                                            <li><a href="{{ route('publications') }}">Publications</a></li>
 		                                            <li><a href="{{ route('regions') }}">Regional Chapter</a></li>
-		                                            <li><a href="short-courses.php">Short Course</a></li>
-		                                            <li><a href="policy-advocacy.php">Policy Advocacy</a></li>
-		                                            <li><a href="networking.php">Networking</a></li>
-		                                            <li><a href="strategic-plan.php">Stratigic Plan</a></li>
-		                                            <li><a href="projects.php">Our Projects</a></li>
+		                                            <li><a href="{{ route('short-courses') }}">Short Course</a></li>
+		                                            <li><a href="{{ route('policy-advocacy') }}">Policy Advocacy</a></li>
+		                                            <li><a href="{{ route('networking') }}">Networking</a></li>
+		                                            <li><a href="{{ route('strategic-plan') }}">Stratigic Plan</a></li>
+		                                            <li><a href="{{ route('projects') }}">Our Projects</a></li>
 		                                        </ul>
 		                                    </li>
 		                                    <li class="first-drop-menu">

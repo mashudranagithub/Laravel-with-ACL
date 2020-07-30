@@ -13,6 +13,9 @@ use App\Bulletin;
 use App\Blog;
 use App\Event;
 use App\Publication;
+use App\Research;
+use App\Course;
+use App\Photo;
 use DB;
 use Session;
 
@@ -143,6 +146,66 @@ class BhwController extends Controller
     }
 
 
+    // Bhw Research
+    public function bhw_research() {
+        $research = Research::orderBy('created_at', 'desc')->paginate(8);
+        return view('front.what.research.researches', compact(
+            'research',
+        ));
+    }
+
+
+    // Bhw Research
+    public function bhw_single_research($id) {
+        $research = Research::find($id);
+        return view('front.what.research.single-research', compact(
+            'research',
+        ));
+    }
+
+
+    // Bhw Research
+    public function bhw_short_courses() {
+        $courses = Course::orderBy('created_at', 'desc')->paginate(9);;
+        return view('front.what.course.short-courses', compact(
+            'courses',
+        ));
+    }
+
+
+    // Bhw Research
+    public function bhw_single_course($id) {
+        $course = Course::find($id);
+        return view('front.what.course.single-course', compact(
+            'course',
+        ));
+    }
+
+
+    // Bhw Policy Advocacy
+    public function bhw_policy_advocacy() {
+        return view('front.what.policy-advocacy');
+    }
+
+
+    // Bhw Networking
+    public function bhw_networking() {
+        return view('front.what.networking');
+    }
+
+
+    // Bhw Projects
+    public function bhw_projects() {
+        return view('front.what.projects');
+    }
+
+
+    // Bhw Strategic Plan
+    public function bhw_strategic_plan() {
+        return view('front.what.strategic-plan');
+    }
+
+
     // Bhw Publication
     public function bhw_publication() {
         $publications = Publication::orderBy('created_at', 'desc')->paginate(10);
@@ -154,7 +217,10 @@ class BhwController extends Controller
 
     // BHW Photo Gallery
     public function photo_gallery() {
-        return view('front.photo-gallery');
+        $photos = Photo::orderBy('created_at', 'desc')->paginate(20);
+        return view('front.photo-gallery', compact(
+            'photos',
+        ));
     }
 
 

@@ -1388,7 +1388,7 @@ section#Research h2 {
 
 .research-info {
     background: #e8e8e8;
-    padding: 10px 15px;
+    padding: 20px;
 }
 
 .research-info h4 a {
@@ -1433,6 +1433,12 @@ section#Photo-gallery h2 {
     min-width: 100%;
     max-width: max-content;
 }
+
+.sl-wrapper.simple-lightbox {
+    position: relative;
+    z-index: 9999999999;
+}
+
 /*Photo Gallery Layout End Here*/
 
 
