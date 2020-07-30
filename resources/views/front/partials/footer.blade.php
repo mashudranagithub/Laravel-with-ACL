@@ -68,45 +68,16 @@
 					<div class="footer-column">
 						<h3>Photo Gallery</h3>
 						<div class="footer-gallery gallery">
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
+
+							@foreach($photos as $photo)
+							<a class="big" href="{{ url('front/assets/images/photo/'.$photo->photo) }}">
+								<img src="{{ url('front/assets/images/photo/'.$photo->photo) }}" alt="Gallery Image">
 							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
-							<a class="big" href="{{ url('front/assets/images/banner/link-banner.jpg') }}">
-								<img src="{{ url('front/assets/images/gallery/gallery-1.jpg') }}" alt="Gallery Image">
-							</a>
+							@endforeach
+
 						</div>
 					</div>
-					<a href="javascript:void(0);" class="view-all">View all</a>
+					<a href="{{ route('photo-gallery') }}" class="view-all">View all</a>
 				</div>	
 			</div>
 		</div>

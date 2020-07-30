@@ -22,7 +22,7 @@
 		</div>
 		<div class="row gallery">
 
-			@foreach($photos as $photo)
+			@foreach($g_photos as $photo)
 			<div class="col-md-3">
 				<div class="gallery-item">
 					<a href="{{ url ('front/assets/images/photo/'.$photo->photo) }}">
@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="bhw-pagination">
-					{{ $photos->links() }}
+					{{ $g_photos->links() }}
 				</div>
 			</div>
 

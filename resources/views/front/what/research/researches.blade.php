@@ -33,7 +33,7 @@
 				<div class="single-research">
 					<div class="single-research-img">
 						<a href="{{ route('single-research', $single_research->id) }}">
-							<img src="{{ asset('front/assets/images/what-we-do/research/Research.jpg') }}" alt="Research Image">
+							<img src="{{ url('front/assets/images/what-we-do/research/'.$single_research->research_image) }}" alt="Research Image">
 						</a>
 					</div>
 					<div class="research-info">

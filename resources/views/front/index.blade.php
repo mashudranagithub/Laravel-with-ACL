@@ -95,66 +95,24 @@
 				</div>
 			</div>
 			<div class="owl-carousel work-slider">
-				<div class="single-work full-box">
-					<div class="single-work-image">
-						<a href="javascript:void(0);">
-							<img src="{{ url ('front/assets/images/work/1.jpg') }}" alt="Work Image">
-						</a>
+
+				@foreach($projects as $project)
+					<div class="single-work full-box">
+						<div class="single-work-image">
+							<a href="javascript:void(0);">
+								<img src="{{ url('front/assets/images/project/'.$project->project_image) }}" alt="Work Image">
+							</a>
+						</div>
+						<div class="single-work-info info-box">
+							<h3><a href="javascript:void(0);">{{ Illuminate\Support\Str::limit($project->project_title, 23) }}</a></h3>
+							<p>
+								{!! Illuminate\Support\Str::limit($project->project_detail, 150) !!}
+							</p>
+							<p class="info-update-date">{{ $project->created_at->format('d M, Y') }}</p>
+						</div>
 					</div>
-					<div class="single-work-info info-box">
-						<h3><a href="javascript:void(0);">non-communicable diseases</a></h3>
-						<p>This report on the Non-communicable Diseases (NCDs) is the sixth report presented by the Bangladesh Health Watch (BHW) on the state of health in Bangladesh.</p>
-						<p class="info-update-date">Last update 1w ago</p>
-					</div>
-				</div>
-				<div class="single-work full-box">
-					<div class="single-work-image image-box">
-						<a href="javascript:void(0);">
-							<img src="{{ url ('front/assets/images/work/3.jpg') }}" alt="Work Image">
-						</a>
-					</div>
-					<div class="single-work-info info-box">
-						<h3><a href="javascript:void(0);">non-communicable diseases</a></h3>
-						<p>This report on the Non-communicable Diseases (NCDs) is the sixth report presented by the Bangladesh Health Watch (BHW) on the state of health in Bangladesh.</p>
-						<p class="info-update-date">Last update 1w ago</p>
-					</div>
-				</div>
-				<div class="single-work full-box">
-					<div class="single-work-image image-box">
-						<a href="javascript:void(0);">
-							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
-						</a>
-					</div>
-					<div class="single-work-info info-box">
-						<h3><a href="javascript:void(0);">non-communicable diseases</a></h3>
-						<p>This report on the Non-communicable Diseases (NCDs) is the sixth report presented by the Bangladesh Health Watch (BHW) on the state of health in Bangladesh.</p>
-						<p class="info-update-date">Last update 1w ago</p>
-					</div>
-				</div>
-				<div class="single-work full-box">
-					<div class="single-work-image image-box">
-						<a href="javascript:void(0);">
-							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
-						</a>
-					</div>
-					<div class="single-work-info info-box">
-						<h3><a href="javascript:void(0);">non-communicable diseases</a></h3>
-						<p>This report on the Non-communicable Diseases (NCDs) is the sixth report presented by the Bangladesh Health Watch (BHW) on the state of health in Bangladesh.</p>
-						<p class="info-update-date">Last update 1w ago</p>
-					</div>
-				</div>
-				<div class="single-work full-box">
-					<div class="single-work-image image-box">
-						<a href="javascript:void(0);">
-							<img src="{{ url ('front/assets/images/work/2.jpg') }}" alt="Work Image">
-						</a>
-					</div>
-					<div class="single-work-info info-box">
-						<h3><a href="javascript:void(0);">non-communicable diseases</a></h3>
-						<p>This report on the Non-communicable Diseases (NCDs) is the sixth report presented by the Bangladesh Health Watch (BHW) on the state of health in Bangladesh.</p>
-						<p class="info-update-date">Last update 1w ago</p>
-					</div>
-				</div>
+				@endforeach
+
 			</div>
 			<div class="container">
 				<div class="row">

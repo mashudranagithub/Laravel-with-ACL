@@ -38,6 +38,7 @@ Route::get('/networking', 'BhwController@bhw_networking')->name('networking');
 Route::get('/strategic-plan', 'BhwController@bhw_strategic_plan')->name('strategic-plan');
 
 Route::get('projects', 'BhwController@bhw_projects')->name('projects');
+Route::get('single-project/{id}', 'BhwController@bhw_single_projects')->name('single-project');
 
 
 Route::get('/publications', 'BhwController@bhw_publication')->name('publications');
@@ -211,6 +212,15 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('photo/edit/{id}', 'PhotoController@edit')->name('editPhoto');
 	Route::put('photo/update/{id}', 'PhotoController@update')->name('updatePhoto');
 	Route::delete('photo/delete/{id}', 'PhotoController@destroy')->name('deletePhoto');
+
+	// Project Routes Start Here
+	Route::get('all-project', 'ProjectController@index')->name('all-project');
+	Route::get('project/create', 'ProjectController@create')->name('createProject');
+	Route::post('project/create', 'ProjectController@store')->name('storeProject');
+	Route::get('project/show/{id}', 'ProjectController@show')->name('showProject');
+	Route::get('project/edit/{id}', 'ProjectController@edit')->name('editProject');
+	Route::put('project/update/{id}', 'ProjectController@update')->name('updateProject');
+	Route::delete('project/delete/{id}', 'ProjectController@destroy')->name('deleteProject');
 
 
 

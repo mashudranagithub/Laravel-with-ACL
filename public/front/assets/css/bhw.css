@@ -767,6 +767,13 @@ section#single-Blog .blog-info p {
     margin-bottom: 10px;
 }
 
+section#single-Blog .blog-info ul li {
+    list-style: disc;
+    display: list-item;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
 
 /*blogs End Here*/
 
